@@ -1,0 +1,96 @@
+
+
+
+
+
+
+
+                firstName Mark
+                batch 13
+                major math
+                emailAddress mark@email.com
+                companyName Cydeo
+                street 777 5th Ave
+                zipCode 33222
+
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Student{
+
+    private String firstName;
+    private int batch;
+    private String major;
+    private Contact contact;
+    private Company company;
+
+}
+
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Contact{
+
+    private String emailAddress;
+
+}
+
+
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Company{
+
+   private String companyName;
+   private Address address;
+
+}
+
+
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Address{
+
+   private String street;
+   private int zipCode;
+
+}
+
+
+
+
+
+{
+    "students": [
+        {
+            "studentId": 2,
+            "firstName": "Mark",
+            "lastName": "Telesco",
+            "batch": 13,
+            "joinDate": "12/27/2021",
+            "birthDate": "02/04/2001",
+            "password": "4333333",
+            "subject": "student",
+            "gender": "Male",
+            "admissionNo": "123",
+            "major": "math",
+            "section": "100000",
+            "contact": {
+                "contactId": 1,
+                "phone": "1235332544",
+                "emailAddress": "mark@email.com",
+                "permanentAddress": "123 happy street"
+            },
+            "company": {
+                "companyId": 2,
+                "companyName": "Cydeo",
+                "title": "Dean",
+                "startDate": "06/19/2018",
+                "address": {
+                    "addressId": 2,
+                    "street": "777 5th Ave",
+                    "city": "McLean",
+                    "state": "Virginia",
+                    "zipCode": 33222
+                }
+            }
+        }
+    ]
+}
